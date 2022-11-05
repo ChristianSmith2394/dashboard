@@ -1,4 +1,4 @@
-import { createContext, useState, useMemo, color } from "@mui/system";
+import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
 
 // Color Design Tokens
@@ -200,7 +200,7 @@ export const themeSettings = (mode) => {
 
 //Context for color mode
 
-export const ColorMoeContext = createContext({
+export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });
 
