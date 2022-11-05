@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
@@ -12,7 +13,6 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
-import React from "react";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -40,7 +40,7 @@ const Dashboard = () => {
         </Box>
       </Box>
 
-      {/* GRID & CHARTS */}
+      {/* GRID CHARTS */}
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
@@ -125,7 +125,7 @@ const Dashboard = () => {
           />
         </Box>
 
-        {/* ROW 2 */}
+        {/* ROW 2  */}
         <Box
           gridColumn="span 8"
           gridRow="span 2"
@@ -256,9 +256,9 @@ const Dashboard = () => {
           >
             Sales Quantity
           </Typography>
-          <Box height="250px" mt="-20px">
+          {/* <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />
-          </Box>
+          </Box> */}
         </Box>
         <Box
           gridColumn="span 4"
