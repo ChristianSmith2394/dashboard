@@ -4,7 +4,7 @@ import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockData";
 import React from "react";
 
-const BarChart = ({ isDashboard = true }) => {
+const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 

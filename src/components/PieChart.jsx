@@ -43,10 +43,10 @@ const PieChart = () => {
       padAngle={0.7}
       cornerRadius={3}
       activeOuterRadiusOffset={8}
-      borderColor={{
-        from: "color",
-        modifiers: [["darker", 0.2]],
-      }}
+      // borderColor={{
+      //   from: "color",
+      //   modifiers: [["darker", 0.2]],
+      // }}
       arcLinkLabelsSkipAngle={10}
       arcLinkLabelsTextColor={colors.grey[100]}
       arcLinkLabelsThickness={2}
@@ -83,7 +83,7 @@ const PieChart = () => {
           anchor: "bottom",
           direction: "row",
           justify: false,
-          translateX: 0,
+          translateX: 20,
           translateY: 56,
           itemsSpacing: 0,
           itemWidth: 100,
@@ -97,7 +97,7 @@ const PieChart = () => {
             {
               on: "hover",
               style: {
-                itemTextColor: "#000",
+                itemTextColor: "black",
               },
             },
           ],
