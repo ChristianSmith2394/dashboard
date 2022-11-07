@@ -6,54 +6,26 @@ import React from "react";
 
 const PieChart = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  // const colors = tokens(theme.palette.mode);
   return (
     <ResponsivePie
       data={data}
-      theme={{
-        axis: {
-          domain: {
-            line: {
-              stroke: colors.grey[100],
-            },
-          },
-          legend: {
-            text: {
-              fill: colors.grey[100],
-            },
-          },
-          ticks: {
-            line: {
-              stroke: colors.grey[100],
-              strokeWidth: 1,
-            },
-            text: {
-              fill: colors.grey[100],
-            },
-          },
-        },
-        legends: {
-          text: {
-            fill: colors.grey[100],
-          },
-        },
-      }}
       margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
       innerRadius={0.5}
       padAngle={0.7}
       cornerRadius={3}
       activeOuterRadiusOffset={8}
+      borderWidth={1}
       // borderColor={{
       //   from: "color",
-      //   modifiers: [["darker", 0.2]],
+      //   modifiers: [["darker", "3"]],
       // }}
       arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor={colors.grey[100]}
+      arcLinkLabelsTextColor={{ from: "color", modifiers: [] }}
       arcLinkLabelsThickness={2}
-      arcLinkLabelsColor={{ from: "color" }}
-      enableArcLabels={false}
-      arcLabelsRadiusOffset={0.4}
-      arcLabelsSkipAngle={7}
+      arcLinkLabelsColor={{ from: "color", modifiers: [] }}
+      arcLabelsRadiusOffset={0.45}
+      arcLabelsSkipAngle={10}
       arcLabelsTextColor={{
         from: "color",
         modifiers: [["darker", 2]],
@@ -61,21 +33,71 @@ const PieChart = () => {
       defs={[
         {
           id: "dots",
-          type: "patternDots",
+          type: "color",
           background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
+          color: "color",
           size: 4,
           padding: 1,
           stagger: true,
         },
         {
           id: "lines",
-          type: "patternLines",
+          type: "color",
           background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
+          color: "color",
           rotation: -45,
           lineWidth: 6,
           spacing: 10,
+        },
+      ]}
+      fill={[
+        {
+          match: {
+            id: "ruby",
+          },
+          id: "dots",
+        },
+        {
+          match: {
+            id: "c",
+          },
+          id: "dots",
+        },
+        {
+          match: {
+            id: "go",
+          },
+          id: "dots",
+        },
+        {
+          match: {
+            id: "python",
+          },
+          id: "dots",
+        },
+        {
+          match: {
+            id: "scala",
+          },
+          id: "lines",
+        },
+        {
+          match: {
+            id: "lisp",
+          },
+          id: "lines",
+        },
+        {
+          match: {
+            id: "elixir",
+          },
+          id: "lines",
+        },
+        {
+          match: {
+            id: "javascript",
+          },
+          id: "lines",
         },
       ]}
       legends={[
@@ -83,7 +105,7 @@ const PieChart = () => {
           anchor: "bottom",
           direction: "row",
           justify: false,
-          translateX: 20,
+          translateX: 0,
           translateY: 56,
           itemsSpacing: 0,
           itemWidth: 100,
@@ -97,7 +119,7 @@ const PieChart = () => {
             {
               on: "hover",
               style: {
-                itemTextColor: "black",
+                itemTextColor: "#000",
               },
             },
           ],
