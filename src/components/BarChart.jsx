@@ -101,6 +101,7 @@ const BarChart = ({ isDashboard = false }) => {
           itemsSpacing: 2,
           itemWidth: 100,
           itemHeight: 20,
+          itemTextColor: "#eeeeee",
           itemDirection: "left-to-right",
           itemOpacity: 0.85,
           symbolSize: 20,

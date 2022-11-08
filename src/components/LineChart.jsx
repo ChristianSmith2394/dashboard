@@ -20,7 +20,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           },
           legend: {
             text: {
-              fill: colors.grey[100],
+              fill: colors.primary[100],
             },
           },
           ticks: {
@@ -29,13 +29,13 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
               strokeWidth: 1,
             },
             text: {
-              fill: colors.grey[100],
+              fill: colors.blueAccent[100],
             },
           },
         },
         legends: {
           text: {
-            fill: colors.grey[100],
+            fill: colors.blueAccent[100],
           },
         },
         tooltip: {
@@ -109,7 +109,8 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           itemOpacity: 0.75,
           symbolSize: 12,
           symbolShape: "circle",
-          symbolBorderColor: "rgba(0, 0, 0, .5)",
+          symbolBorderColor: "#eeeeee",
+          itemTextColor: "#eeeeee",
           effects: [
             {
               on: "hover",

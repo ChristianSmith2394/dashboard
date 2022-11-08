@@ -121,7 +121,7 @@ const PieChart = () => {
           itemsSpacing: 0,
           itemWidth: 100,
           itemHeight: 18,
-          itemTextColor: "#999",
+          itemTextColor: "#eeeeee",
           itemDirection: "left-to-right",
           itemOpacity: 1,
           symbolSize: 18,
