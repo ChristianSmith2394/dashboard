@@ -6,7 +6,7 @@ import React from "react";
 
 const PieChart = () => {
   const theme = useTheme();
-  // const colors = tokens(theme.palette.mode);
+  const colors = tokens(theme.palette.mode);
   return (
     <ResponsivePie
       data={data}
@@ -16,6 +16,17 @@ const PieChart = () => {
       cornerRadius={3}
       activeOuterRadiusOffset={8}
       borderWidth={1}
+      colors={[
+        colors.greenAccent[100],
+        colors.greenAccent[200],
+        colors.greenAccent[300],
+        colors.greenAccent[400],
+        colors.greenAccent[500],
+        colors.greenAccent[600],
+        colors.greenAccent[700],
+        colors.greenAccent[800],
+        colors.greenAccent[900],
+      ]}
       // borderColor={{
       //   from: "color",
       //   modifiers: [["darker", "3"]],
@@ -105,7 +116,7 @@ const PieChart = () => {
           anchor: "bottom",
           direction: "row",
           justify: false,
-          translateX: 0,
+          translateX: 28,
           translateY: 56,
           itemsSpacing: 0,
           itemWidth: 100,
