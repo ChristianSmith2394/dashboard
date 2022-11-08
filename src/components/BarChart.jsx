@@ -1,12 +1,12 @@
-// import { useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
-// import { tokens } from "../theme";
+import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockData";
 import React from "react";
 
 const BarChart = ({ isDashboard = false }) => {
-  // const theme = useTheme();
-  // const colors = tokens(theme.palette.mode);
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
   return (
     <ResponsiveBar
@@ -17,7 +17,17 @@ const BarChart = ({ isDashboard = false }) => {
       padding={0.3}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
-      colors={{ scheme: "nivo" }}
+      colors={[
+        colors.blueAccent[100],
+        colors.blueAccent[200],
+        colors.blueAccent[300],
+        colors.blueAccent[400],
+        colors.blueAccent[500],
+        colors.blueAccent[600],
+        colors.blueAccent[700],
+        colors.blueAccent[800],
+        colors.blueAccent[900]
+      ]}
       defs={[
         {
           id: "dots",
