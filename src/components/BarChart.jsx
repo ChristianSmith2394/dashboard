@@ -18,15 +18,15 @@ const BarChart = ({ isDashboard = false }) => {
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
       colors={[
-        colors.blueAccent[100],
-        colors.blueAccent[200],
-        colors.blueAccent[300],
+        colors.greenAccent[600],
+        colors.greenAccent[400],
         colors.blueAccent[400],
-        colors.blueAccent[500],
+        colors.blueAccent[600],
+        colors.redAccent[500],
         colors.blueAccent[600],
         colors.blueAccent[700],
         colors.blueAccent[800],
-        colors.blueAccent[900]
+        colors.blueAccent[900],
       ]}
       defs={[
         {
@@ -116,7 +116,7 @@ const BarChart = ({ isDashboard = false }) => {
       ]}
       role="application"
       ariaLabel="Nivo bar chart demo"
-      barAriaLabel={function (e) {
+      barAriaLabel={function(e) {
         return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
       }}
     />

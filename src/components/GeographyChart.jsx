@@ -39,6 +39,17 @@ const GeographyChart = ({ isDashboard = false }) => {
           },
         },
       }}
+      colors={[
+        colors.greenAccent[100],
+        colors.greenAccent[400],
+        colors.greenAccent[400],
+        colors.blueAccent[100],
+        colors.blueAccent[300],
+        colors.blueAccent[500],
+        colors.blueAccent[700],
+        colors.blueAccent[800],
+        colors.blueAccent[900],
+      ]}
       features={geoFeatures.features}
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       domain={[0, 1000000]}

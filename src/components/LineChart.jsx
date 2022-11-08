@@ -45,15 +45,15 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
         },
       }}
       colors={[
-        colors.blueAccent[100],
-        colors.blueAccent[200],
-        colors.blueAccent[300],
+        colors.greenAccent[600],
+        colors.greenAccent[400],
         colors.blueAccent[400],
+        colors.blueAccent[100],
         colors.blueAccent[500],
         colors.blueAccent[600],
         colors.blueAccent[700],
         colors.blueAccent[800],
-        colors.blueAccent[900]
+        colors.blueAccent[900],
       ]}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
       xScale={{ type: "point" }}
